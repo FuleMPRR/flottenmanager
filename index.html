@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flottenmanager Übersicht</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <button onclick="showSection('fahrer')">Fahrer</button>
+    <button onclick="showSection('fahrzeuge')">Fahrzeugübersicht</button>
+    <button onclick="showSection('schaden')">Schadensmeldung</button>
+    <button onclick="showSection('pendenzen')">Pendenzen</button>
+  </div>
+
+  <div class="content">
+    <section id="fahrer" class="section hidden">
+      <h2>Fahrer hinzufügen</h2>
+      <form id="fahrerForm">
+        <input placeholder="Personalnummer" name="personalnummer" required />
+        <input placeholder="Anrede" name="anrede" required />
+        <input placeholder="Vorname" name="vorname" required />
+        <input placeholder="Name" name="name" required />
+        <input placeholder="Adresse" name="adresse" required />
+        <input placeholder="PLZ" name="plz" required />
+        <input placeholder="Ort" name="ort" required />
+        <input placeholder="Telefonnummer" name="telefon" required />
+        <input placeholder="Mailadresse" name="mail" required />
+        <input placeholder="Sprache" name="sprache" required />
+        <button type="submit">Fahrer speichern</button>
+      </form>
+      <div id="fahrerListe"></div>
+    </section>
+
+    <section id="fahrzeuge" class="section hidden">
+      <h2>Fahrzeuge</h2>
+      <form id="fahrzeugForm">
+        <input placeholder="Fahrzeug ID" name="id" required />
+        <input placeholder="Nummernschild" name="schild" required />
+        <input placeholder="Marke" name="marke" required />
+        <input placeholder="Modell" name="modell" required />
+        <button type="submit">Fahrzeug anlegen</button>
+      </form>
+      <div id="fahrzeugListe"></div>
+    </section>
+
+    <section id="schaden" class="section hidden">
+      <h2>Schadensmeldung</h2>
+      <p>Folgt in Version 2</p>
+    </section>
+
+    <section id="pendenzen" class="section hidden">
+      <h2>Pendenzen</h2>
+      <p>Folgt in Version 2</p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
