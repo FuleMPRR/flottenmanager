@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Flottenmanager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <button onclick="showSection('fahrzeuge')">Fahrzeuge</button>
+        <button onclick="showSection('fahrer')">Fahrer</button>
+        <button onclick="showSection('schaden')">Schadensmeldung</button>
+        <button onclick="showSection('pendenzen')">Pendenzen</button>
+    </nav>
+
+    <main>
+        <section id="fahrzeuge">
+            <h2>Fahrzeuge</h2>
+            <form id="vehicleForm">
+                <input placeholder="Fahrzeugnummer"><input placeholder="Kennzeichen"><input placeholder="Marke">
+                <input placeholder="Modell"><input placeholder="Typ"><input placeholder="VIN-Nr.">
+                <input placeholder="Farbe"><input type="date" placeholder="Vertragsbeginn"><input type="date" placeholder="Vertragsende">
+                <input placeholder="Kilometerstand"><input placeholder="Personalnummer"><input placeholder="FahrerIn">
+                <input placeholder="Telefonnummer"><input placeholder="Vorgesetzte"><input placeholder="KST">
+                <button type="submit">Fahrzeug hinzufügen</button>
+            </form>
+            <div id="fahrzeugListe"></div>
+        </section>
+
+        <section id="fahrer" style="display:none;">
+            <h2>Fahrer</h2>
+            <form id="fahrerForm">
+                <input placeholder="Personalnummer"><input placeholder="Anrede"><input placeholder="Vorname">
+                <input placeholder="Name"><input placeholder="Adresse"><input placeholder="PLZ">
+                <input placeholder="Ort"><input placeholder="Telefonnummer"><input placeholder="E-Mail">
+                <input placeholder="Sprache">
+                <button type="submit">Fahrer hinzufügen</button>
+            </form>
+            <div id="fahrerListe"></div>
+        </section>
+
+        <section id="schaden" style="display:none;">
+            <h2>Schadensmeldung</h2>
+            <form id="schadenForm">
+                <input placeholder="Fahrzeug"><input placeholder="Fahrer"><input type="date" placeholder="Schadensdatum">
+                <input placeholder="Schadenort"><input placeholder="Fremdbeteiligung"><textarea placeholder="Schadenhergang"></textarea>
+                <input placeholder="Schaden gemeldet an?">
+                <label><input type="checkbox"> Fremdverschulden</label>
+                <label><input type="checkbox"> Eigenverschulden</label>
+                <label><input type="checkbox"> Glasbruch</label>
+                <label><input type="checkbox"> Parkschaden</label>
+                <button type="submit">Meldung speichern</button>
+            </form>
+            <div id="schadenListe"></div>
+        </section>
+
+        <section id="pendenzen" style="display:none;">
+            <h2>Pendenzen</h2>
+            <form id="pendenzForm">
+                <input placeholder="Titel"><textarea placeholder="Beschreibung"></textarea>
+                <button type="submit">Pendenz speichern</button>
+            </form>
+            <div id="pendenzListe"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
