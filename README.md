@@ -1,2 +1,0 @@
-# flottenmanager
-Einfache Flottenmanagement-Webapp
